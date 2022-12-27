@@ -26,11 +26,24 @@ h1 {
 }
 
 /* MAIN IMAGE */
-img {
-    max-width: 400px;
-    border-radius: 50px;
+.mainImage {
+    margin: auto;
+    overflow: hidden;
     border: 5px solid #708D81;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.500);
+    border-radius: 50px;
+}
+
+.mainImage img {
+    max-width: 100%;
+    transition: all 0.3s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+}
+
+.mainImage:hover img {
+    transform: scale(1.1);
 }
 
 /* SCOREBOARD */
@@ -56,7 +69,8 @@ h2 {
 }
 
 .instructions:hover {
-    font-weight: bold;
+    font-size: large;
+    transition: 500ms;
 }
 
 /* Playing Too */
@@ -95,12 +109,12 @@ button {
 }
 
 button:hover {
-	border-color: #8d0801;
-	color: #8d0801;
-	box-shadow: 0 0.5em 0.5em -0.4em #FDF0D5;
+    border-color: #8d0801;
+    color: #8d0801;
+    box-shadow: 0 0.5em 0.5em -0.4em #FDF0D5;
     cursor: pointer;
-	transform: translateY(-0.25em);
-    transition: 300ms;
+    transform: translateY(-0.25em);
+    transition: 500ms;
 }
 
 /* End Game */
