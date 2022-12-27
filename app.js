@@ -10,7 +10,7 @@ let player2Score = 0;
 let winningScore = 3;
 let isGameOver = false;
 
-player1Button.addEventListener('click', function (){
+player1Button.addEventListener('click', function () {
     if (!isGameOver) {
         player1Score += 1;
         if (player1Score === winningScore) {
@@ -25,7 +25,7 @@ player1Button.addEventListener('click', function (){
     }
 })
 
-player2Button.addEventListener('click', function (){
+player2Button.addEventListener('click', function () {
     if (!isGameOver) {
         player2Score += 1;
         if (player2Score === winningScore) {
@@ -39,7 +39,7 @@ player2Button.addEventListener('click', function (){
     }
 })
 
-winningScoreSelect.addEventListener('change', function() {
+winningScoreSelect.addEventListener('change', function () {
     winningScore = parseInt(this.value);
     reset();
 })
@@ -52,8 +52,8 @@ function reset() {
     player2Score = 0;
     player1Display.textContent = 0;
     player2Display.textContent = 0;
-    player1Display.classList.remove('winner','loser');
-    player2Display.classList.remove('winner','loser');
+    player1Display.classList.remove('winner', 'loser');
+    player2Display.classList.remove('winner', 'loser');
     player1Button.disabled = false;
     player2Button.disabled = false;
 }
